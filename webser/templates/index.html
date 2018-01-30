@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Hi, {{ username }}{% endblock %}
+{% block body %}
+
+{% if sqlmsg %}
+<font color = "#FF0000">{{sqlmsg}}</font>
+{% endif %}
+
+<p>Your Contact Book of class {{ cla }}</p>
+
+<table width="300" align="center" border="1">
+<tr> <td>Class</td> <td>StudenID</td> <td>Name</td> <td>PhoneNumber</td> </tr>
+{% for user in userlist %}
+<tr><td>{{user[1]}}</td><td>{{user[2]}}</td><td>{{user[3]}}</td><td>{{user[4]}}</td></tr>
+{% endfor %}
+</table>
+<br>
+<a href="/update">Modify</a> | <a href="/logout">Log out</a>
+{% endblock %}

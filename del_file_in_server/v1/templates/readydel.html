@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block body %}
+
+
+<p>Are you ready to delete files ? </p>
+
+<form action="/oscmd" method="post">
+  <label>Delete Password : <input name="pwd" value=""></label>
+  <button type="submit">Delete it</button>
+</form>
+<br>
+{% endblock %}

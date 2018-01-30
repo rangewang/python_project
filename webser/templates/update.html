@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Modify Your Info{% endblock %}
+{% block body %}
+<h5>Accep format: (06)2390000 、 0919-000-000 、 0900000000</h5>
+
+<form method="post" action="/update" align="center">  
+  <label>New Phone: <input name="newphone" value="{{ newphone }}"></label>
+  <button type="submit">Modify</button> | <a href="/">Cancel</a>
+</form>
+
+{% endblock %}
